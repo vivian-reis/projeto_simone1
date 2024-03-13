@@ -9,7 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    list-style: none;
+    list-style-type: none;
 }
 
 :root{
@@ -89,11 +89,11 @@ body{
 }
 
 .sidenav li a{
-    display: block; /*Foi necessário determinar o display block para poder manipular o tamanho das imagens com as propriedades abaixo.*/
+    display: block;
     min-width: 60px;
     max-width: 150px;
     margin: 10px auto 30px auto;
-    background-image: linear-gradient( to right, var(--cor2), var(--cor1));
+    background-image: linear-gradient( to right, var(--cor5), var(--cor2));
     padding: 8px;
     border-radius: 5px;
     box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
@@ -105,8 +105,8 @@ body{
 }
 
 .sidenav li a:hover{
-    background-color: var(--cor2);
     color: var(--cor1);
+    background-image: linear-gradient( to right, var(--cor3), var(--cor3));
 }
 
 main{
@@ -119,15 +119,24 @@ main{
     line-height: 2em;
 }
 
+#apresentacao, #atuacao, #formacao, #cursos{
+    padding-bottom: 20px;
+    border-bottom: 3px double var(--cor4);
+}
+
 h1{
     text-align: center;
     font-size: 1.7em;
-    line-height: 2em;
+    line-height: 2.5em;
+    font-weight: normal;
+    font-style: italic;
 }
 
 h2{
     font-size: 1.3em;
-    line-height: 4em;
+    line-height: 2.5em;
+    font-style: italic;
+    color: var(--cor5);
 }
 
 p{
@@ -149,12 +158,90 @@ p{
     margin: 10px 30px;
     font-style: italic;
 }
+
 footer{
     grid-area: footer;
     background-color: var(--cor2);
     color: white;
-    align-items: center;
     padding: 15px;
+    text-align: center;
     font-family: var(--fonte1);
     font-size: 1em;
+}
+
+@media screen and (max-width: 810px) {
+
+    header {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        position: relative;
+    }
+
+    header nav ul{
+        display: block;
+    }
+
+    header li{
+        margin: 5px 0;
+        flex-wrap: wrap;
+    }   
+    
+    #sobre{
+        position: relative;
+        left: 5px;
+        width: calc(124px);
+    }
+}
+
+@keyframes seta{
+    from{
+        right: 30px;
+    }
+    to{
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "header"
+        "sidenav"
+        "apresentacao"
+        "main"
+        "aside"
+        "footer"
+        ;
+    }
+
+    .sidenav{
+        position: relative; 
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar; 
+    }
+
+    .sidenav ul{
+        display: flex;
+        align-items: center;
+    }
+    .sidenav li a{
+        margin: 10px 15px;
+        align-self: center;
+    }
+
+    .sidenav::after{
+        content: '→';
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        color: rgba(0, 0, 0, .3);
+        animation: seta .5s ease-in 0s infinite alternate;
+    }
+}
+
+@media screen and (min-width: 810px) and (max-width: 992px) {
 }

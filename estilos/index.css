@@ -164,19 +164,6 @@ footer{
     font-size: 1em;
 }
 
-
-/* Typical Device Breakpoints
-
-
-Pequenas telas: até 600px
-Celular: de 601px até 768px
-Tablet: de 769px até 992px
-mudar titulo para flex: 0 0 420px; em 782
-
-Desktop: de 993px até 1200px
-Grandes telas: acima de 1200px
-*/
-
 @media screen and (max-width: 810px) {
 
     header {
