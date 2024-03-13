@@ -76,8 +76,8 @@ header li + li{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .inicio img{
@@ -93,7 +93,7 @@ header li + li{
     font-size: 1.8em;
     color: var(--cor2);
     font-weight: bolder;
-    margin: 0px 10px;
+    margin: 20px 10px;
 }
 
 .sobre{
@@ -128,6 +128,7 @@ header li + li{
     background-color: var(--cor1);
     padding: 30px;
     font-family: var(--fonte1);
+    text-align: center;
 }
 
 .contatos ul{
@@ -193,7 +194,7 @@ Grandes telas: acima de 1200px
         margin: 5px 0;
         flex-wrap: wrap;
     }   
-
+    
     #sobre{
         position: relative;
         left: 5px;
