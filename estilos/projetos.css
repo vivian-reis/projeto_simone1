@@ -254,7 +254,7 @@ footer{
         position: absolute;
         top: 5px;
         right: 30px;
-        color: rgba(0, 0, 0, .3);
+        color: var(--cor1);
         animation: seta .5s ease-in 0s infinite alternate;
     }
 
