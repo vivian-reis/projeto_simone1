@@ -74,7 +74,7 @@ header li + li{
 
 body{
     display: grid;
-    grid-template-columns: minmax(160px, 1fr) 3fr fr;
+    grid-template-columns: minmax(180px, 1fr) 3fr fr;
     grid-template-areas: 
     "header header header"
     "sidenav main main"
@@ -94,6 +94,11 @@ img{
 .sidenav{
     grid-area: sidenav;
     background-image: linear-gradient( to right, var(--cor5), var(--cor2));
+}
+
+.sidenav ul{
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr);
 }
 
 .sidenav li a{
@@ -159,6 +164,12 @@ main {
     width: 100%;
     margin: 20px;
     box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.4);
+}
+
+#camarote object p{
+    padding: 5px;
+    border: 1px double var(--cor3);
+    color: var(--cor4);
 }
 
 h1{
@@ -253,4 +264,22 @@ footer{
     img, #camarote object{
         margin: 20px 0px;
     }
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+
+    #conto, #brisas, #arte, #camarote{
+        display: block;
+    }
+
+    img{
+        margin: 20px auto;
+        max-width: 420px;
+        max-height: 420px;
+    }
+
+    #camarote object{
+        margin: 20px auto;
+    }
+
 }
