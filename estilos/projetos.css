@@ -88,11 +88,12 @@ img{
     border-radius: 10px;
     display: block;
     margin: 20px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.4);
 }
 
 .sidenav{
     grid-area: sidenav;
-    background-color: var(--cor1);
+    background-image: linear-gradient( to right, var(--cor5), var(--cor2));
 }
 
 .sidenav li a{
@@ -100,15 +101,15 @@ img{
     min-width: 60px;
     max-width: 150px;
     margin: 10px auto 30px auto;
-    background-image: linear-gradient( to right, var(--cor5), var(--cor2));
+    background-color: var(--cor1);
     padding: 8px;
     border-radius: 5px;
-    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, .5);
     transition: .1s ease-out;
     font-family: var(--fonte2);
     font-size: 1.8em;
     text-align: center;
-    color: var(--cor6);
+    color: var(--cor5);
 }
 
 .sidenav li a:hover{
@@ -150,13 +151,14 @@ main {
     
 }
 
-#camarote embed{
+#camarote object{
     min-width: 200px;
     min-height: 400px;
     border-radius: 10px;
     max-width: 100%;
     width: 100%;
     margin: 20px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.4);
 }
 
 h1{
@@ -182,6 +184,15 @@ footer{
     font-size: 1em;
 }
 
+@keyframes seta{
+    from{
+        right: 30px;
+    }
+    to{
+        right: 20px;
+    }
+}
+
 @media screen and (max-width: 810px) {
 
     header {
@@ -198,33 +209,16 @@ footer{
     header li{
         margin: 5px 0;
         flex-wrap: wrap;
-    }   
-    
+    }  
+
     #sobre{
         position: relative;
         left: 5px;
         width: calc(124px);
     }
-}
 
-@keyframes seta{
-    from{
-        right: 30px;
-    }
-    to{
-        right: 20px;
-    }
-}
-
-@media screen and (max-width: 800px) {
     body{
-        display: grid;
-        grid-template-areas: 
-        "header header"
-        "sidenav sidenav"
-        "main main"
-        "footer footer"
-        ;
+        display: block;
     }
 
     .sidenav{
@@ -253,37 +247,10 @@ footer{
     }
 
     #conto, #brisas, #arte, #camarote{
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr;
-        align-items: center;
-    }
-    
-    #conto h1, #brisas h1, #arte h1, #camarote h1{
-        grid-row: 1;
-        grid-column: span 2;
-    }
-    
-    #conto p, span, #brisas p, #arte p, #camarote p{
-        grid-row: 2;
-        grid-column: span 2;
-    }
-    
-    #conto img, #brisas img, #arte img{
-        grid-row: 3;
-        grid-column: span 2;
-        margin: 0px;
-    }
-    
-    #camarote embed{
-        min-width: 200px;
-        min-height: 400px;
-        border-radius: 10px;
-        max-width: 100%;
-        width: 100%;
-        margin: 0px;
-        grid-row: 3;
-        grid-column: span 2;
+        display: block;
     }
 
+    img, #camarote object{
+        margin: 20px 0px;
+    }
 }

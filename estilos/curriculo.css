@@ -213,8 +213,7 @@ footer{
         "apresentacao"
         "main"
         "aside"
-        "footer"
-        ;
+        "footer";
     }
 
     .sidenav{
@@ -243,5 +242,26 @@ footer{
     }
 }
 
-@media screen and (min-width: 810px) and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+    body{
+        display: grid;
+        grid-template-columns: minmax(160px, 1fr) 4fr;
+        grid-template-areas: 
+        "header header"
+        "sidenav main "
+        "sidenav main"
+        "sidenav aside"
+        "footer footer";
+    }
 }
+
+/* Typical Device Breakpoints
+
+
+Pequenas telas: até 600px
+Celular: de 601px até 768px
+Tablet: de 769px até 992px
+Desktop: de 993px até 1200px
+Grandes telas: acima de 1200px
+*/
