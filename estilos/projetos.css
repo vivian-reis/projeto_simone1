@@ -170,6 +170,7 @@ main {
     padding: 5px;
     border: 1px double var(--cor3);
     color: var(--cor4);
+    border-radius: 10px;
 }
 
 h1{
